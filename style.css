@@ -114,7 +114,7 @@ nav {
     background-color: #e88e0c;
 }
 
-/* About section */
+/* About section - Enhanced */
 .about {
     padding: 5rem 0;
     background-color: var(--light-bg-color);
@@ -122,7 +122,27 @@ nav {
 
 .about h2 {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    position: relative;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.about h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 0.8rem auto 2rem;
+}
+
+.about p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
 }
 
 .about-content {
@@ -130,6 +150,9 @@ nav {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .about-info {
@@ -139,11 +162,341 @@ nav {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-info:hover {
+    transform: translateY(-5px);
 }
 
 .about-info h3 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Value Story section */
+.value-story {
+    padding: 5rem 0;
+    background-color: var(--white);
+    position: relative;
+}
+
+.value-story::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/pattern-light.png') repeat;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.value-story .container {
+    position: relative;
+    z-index: 1;
+}
+
+.value-story h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    position: relative;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.value-story h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 0.8rem auto 2rem;
+}
+
+.value-story h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.value-story p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 1.2rem;
+    line-height: 1.8;
+}
+
+.value-story p:last-child {
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+.value-story strong {
+    color: var(--primary-color);
+}
+
+.value-story .story-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.story-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Founder section */
+.founder {
+    padding: 5rem 0;
+    background-color: var(--light-bg-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.founder .container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+.founder h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    position: relative;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.founder h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 0.8rem auto 2rem;
+}
+
+.founder h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.founder p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 1.2rem;
+    line-height: 1.8;
+}
+
+.founder em {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.founder strong {
+    color: var(--secondary-color);
+}
+
+.founder-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.founder-content::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent-color);
+    opacity: 0.15;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.founder-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Purpose section */
+.purpose {
+    padding: 5rem 0;
+    background-color: var(--white);
+    position: relative;
+}
+
+.purpose::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: rgba(58, 110, 165, 0.05);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 0;
+}
+
+.purpose .container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+.purpose h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    position: relative;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.purpose h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 0.8rem auto 2rem;
+}
+
+.purpose h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.purpose p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 1.2rem;
+    line-height: 1.8;
+}
+
+.purpose em {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.purpose-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.purpose-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Vision section */
+.vision {
+    padding: 5rem 0;
+    background: linear-gradient(to right, var(--light-bg-color) 0%, #e8f0f8 100%);
+    position: relative;
+}
+
+.vision .container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+.vision h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    position: relative;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.vision h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 0.8rem auto 2rem;
+}
+
+.vision p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.vision blockquote {
+    margin: 2.5rem auto;
+    padding: 2rem;
+    border-left: 4px solid var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0 8px 8px 0;
+    max-width: 700px;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.vision blockquote strong {
+    color: var(--secondary-color);
+}
+
+.vision em {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.vision-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.vision-content.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Services section */
@@ -270,6 +623,16 @@ footer .container {
     .nav-links {
         display: none; /* Simple responsive approach - hide nav links on mobile */
     }
+    
+    .story-content, 
+    .founder-content, 
+    .purpose-content {
+        padding: 1.5rem;
+    }
+    
+    .vision blockquote {
+        padding: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -279,5 +642,45 @@ footer .container {
     
     section {
         padding: 3rem 0;
+    }
+}
+
+/* Common section header animation */
+.about h2, .value-story h2, .founder h2, .purpose h2, .vision h2 {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Common section content animation - triggered by scrolling */
+.about-content, .story-content, .founder-content, 
+.purpose-content, .vision-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-content.visible, .story-content.visible, .founder-content.visible, 
+.purpose-content.visible, .vision-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add this at the end of the file */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 } 
