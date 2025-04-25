@@ -59,10 +59,9 @@ A future where every individual can beam their ideas, dreams, and actions forwar
 
 Have questions or want to work with us? Reach out anytime.
 
-- **Email**: [hello@waybeam.com](mailto:hello@waybeam.com)
-- **Website**: [https://waybeam.com](https://waybeam.com)
-- **Twitter / X**: [@WaybeamHQ](https://twitter.com/WaybeamHQ)
-- **LinkedIn**: [Waybeam Inc.](https://linkedin.com/company/waybeam)
+- **Email**: [wenway13@gmail.com](mailto:wenway13@gmail.com)
+- **Website**: [https://deanchung13.github.io/waybeam/](https://deanchung13.github.io/waybeam/)
+- **Twitter / X**: [@CHUNGWENWEI](https://x.com/CHUNGWENWEI)
 
 ## Technical Information
 
@@ -74,11 +73,3 @@ This is a simple static website built with:
 - `index.html` - Main website structure
 - `style.css` - Styling for the website
 - `assets/` - Directory for images and other assets
-
-## Deployment
-
-The site can be deployed to any static web hosting service such as:
-- GitHub Pages
-- Netlify
-- Vercel
-- Amazon S3
